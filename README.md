@@ -1,4 +1,4 @@
-# NOR-YT-EX-VIDEO[ai_studio_code (71).html](https://github.com/user-attachments/files/21889550/ai_studio_code.71.html)
+[Uploading ai_studio_code (73).html…]()
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -294,7 +294,7 @@
             position: relative;
         }
 
-        .player-container iframe {
+        .player-container iframe, .player-container video {
             width: 100%;
             height: 100%;
             border: none;
@@ -329,6 +329,8 @@
             display: flex;
             gap: 10px;
             padding: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .search-bar input {
@@ -391,21 +393,11 @@
         }
 
         @keyframes rotateLogo {
-            0% {
-                transform: rotateY(0deg) rotateZ(0deg);
-            }
-            25% {
-                transform: rotateY(30deg) rotateZ(10deg);
-            }
-            50% {
-                transform: rotateY(0deg) rotateZ(0deg);
-            }
-            75% {
-                transform: rotateY(-30deg) rotateZ(-10deg);
-            }
-            100% {
-                transform: rotateY(0deg) rotateZ(0deg);
-            }
+            0% { transform: rotateY(0deg) rotateZ(0deg); }
+            25% { transform: rotateY(30deg) rotateZ(10deg); }
+            50% { transform: rotateY(0deg) rotateZ(0deg); }
+            75% { transform: rotateY(-30deg) rotateZ(-10deg); }
+            100% { transform: rotateY(0deg) rotateZ(0deg); }
         }
 
         .logo-3d span {
@@ -429,16 +421,9 @@
         .logo-3d span:nth-child(12) { animation-delay: 1.2s; }
 
         @keyframes bounceIn {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            40% {
-                transform: translateY(-30px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); opacity: 1; }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
         }
 
         .loading-text {
@@ -449,12 +434,8 @@
         }
 
         @keyframes fadeIn {
-            0%, 100% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
         }
 
         .cosmic-bg {
@@ -480,12 +461,8 @@
         }
 
         @keyframes starfield {
-            from {
-                background-position: 0 0;
-            }
-            to {
-                background-position: -10000px 10000px;
-            }
+            from { background-position: 0 0; }
+            to { background-position: -10000px 10000px; }
         }
 
         /* --- PC/Desktop Specific Styles --- */
@@ -506,6 +483,35 @@
                 max-width: 800px;
                 margin: 2rem auto;
             }
+
+            .bottom-nav {
+                display: none; /* Hide mobile bottom nav on desktop */
+            }
+
+            header { /* Add navigation to header for desktop */
+                justify-content: flex-start;
+                gap: 2rem;
+            }
+
+            .header-nav {
+                display: flex;
+                gap: 1.5rem;
+            }
+
+            .header-nav-item {
+                cursor: pointer;
+                color: var(--secondary-text-color);
+                transition: color 0.3s;
+                font-weight: 500;
+            }
+
+            .header-nav-item.active {
+                color: var(--primary-color);
+            }
+
+            .header-nav-item:hover {
+                color: var(--text-color);
+            }
         }
 
     </style>
@@ -525,71 +531,36 @@
     <div id="app-wrapper" class="hidden">
         <header>
             <div id="app-name-logo" class="logo">AppName</div>
+            <div class="header-nav">
+                 <div class="header-nav-item active" data-section="home-section">Home</div>
+                 <div class="header-nav-item" data-section="search-section">Search</div>
+            </div>
         </header>
 
         <div class="container">
             <section id="home-section" class="section active">
                 <div id="featured-carousel-container" class="content-row"></div>
-                <!-- Original Ad Spot -->
+                
                 <div class="banner-ad-container">
-                    <script type="text/javascript">
-                        atOptions = {
-                            'key' : 'b73356f285db12e53e1909281a3cfb52',
-                            'format' : 'iframe',
-                            'height' : 300,
-                            'width' : 160,
-                            'params' : {}
-                        };
-                    </script>
-                    <script type="text/javascript" src="//www.highperformanceformat.com/b73356f285db12e53e1909281a3cfb52/invoke.js"></script>
+                    <script type='text/javascript' src='//pl27461905.profitableratecpm.com/60/6a/6c/606a6c3100d9a23e598000191be7784e.js'></script>
                 </div>
+
                 <div id="latest-videos-container">
                     <h2 class="row-title">Latest Videos</h2>
-                    <!-- New Ad Spot 1 -->
-                    <div class="banner-ad-container">
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key' : 'b73356f285db12e53e1909281a3cfb52',
-                                'format' : 'iframe',
-                                'height' : 300,
-                                'width' : 160,
-                                'params' : {}
-                            };
-                        </script>
-                        <script type="text/javascript" src="//www.highperformanceformat.com/b73356f285db12e53e1909281a3cfb52/invoke.js"></script>
-                    </div>
                     <div id="video-grid" class="video-grid"></div>
                 </div>
-                 <!-- New Ad Spot 2 -->
+
                 <div class="banner-ad-container">
-                    <script type="text/javascript">
-                        atOptions = {
-                            'key' : 'b73356f285db12e53e1909281a3cfb52',
-                            'format' : 'iframe',
-                            'height' : 300,
-                            'width' : 160,
-                            'params' : {}
-                        };
-                    </script>
-                    <script type="text/javascript" src="//www.highperformanceformat.com/b73356f285db12e53e1909281a3cfb52/invoke.js"></script>
+                    <script type='text/javascript' src='//pl27461905.profitableratecpm.com/60/6a/6c/606a6c3100d9a23e598000191be7784e.js'></script>
                 </div>
             </section>
             <section id="search-section" class="section">
                 <div class="search-bar">
                     <input type="text" id="search-input" placeholder="Search for videos...">
                 </div>
-                 <!-- New Ad Spot 3 -->
+
                 <div class="banner-ad-container">
-                    <script type="text/javascript">
-                        atOptions = {
-                            'key' : 'b73356f285db12e53e1909281a3cfb52',
-                            'format' : 'iframe',
-                            'height' : 300,
-                            'width' : 160,
-                            'params' : {}
-                        };
-                    </script>
-                    <script type="text/javascript" src="//www.highperformanceformat.com/b73356f285db12e53e1909281a3cfb52/invoke.js"></script>
+                    <script type='text/javascript' src='//pl27461905.profitableratecpm.com/60/6a/6c/606a6c3100d9a23e598000191be7784e.js'></script>
                 </div>
                 <div id="search-results-container" class="video-grid"></div>
             </section>
@@ -597,15 +568,11 @@
 
         <nav class="bottom-nav">
             <div class="nav-item active" data-section="home-section">
-                <svg viewBox="0 0 24 24">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
-                </svg>
+                <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
                 <span>Home</span>
             </div>
             <div class="nav-item" data-section="search-section">
-                <svg viewBox="0 0 24 24">
-                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-                </svg>
+                <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
                 <span>Search</span>
             </div>
         </nav>
@@ -647,19 +614,15 @@
         }
 
         function watchAppSettings() {
-            // Watch for changes in App Name
             database.ref('app_settings/general/appName').on('value', snapshot => {
                 const appName = snapshot.val() || 'NOR YT EX';
                 document.getElementById('app-name-logo').textContent = appName;
                 document.getElementById('app-title').textContent = appName;
             });
 
-            // Watch for changes in Theme Colors
             database.ref('app_settings/theme').on('value', snapshot => {
                 if (!snapshot.exists()) return;
                 const themes = snapshot.val();
-                
-                // For demonstration, we'll apply the dark theme variables
                 const currentTheme = themes.dark;
                 if (currentTheme) {
                     document.documentElement.style.setProperty('--primary-color', currentTheme.primaryColor);
@@ -670,24 +633,28 @@
             });
         }
 
+        function handleNavigation(sectionId) {
+            document.querySelectorAll('.nav-item.active, .header-nav-item.active').forEach(i => i.classList.remove('active'));
+            document.querySelectorAll(`.nav-item[data-section="${sectionId}"], .header-nav-item[data-section="${sectionId}"]`).forEach(i => i.classList.add('active'));
+            
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+
         function setupEventListeners() {
-            document.querySelectorAll('.nav-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    document.querySelector('.nav-item.active').classList.remove('active');
-                    item.classList.add('active');
-                    const sectionId = item.dataset.section;
-                    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-                    document.getElementById(sectionId).classList.add('active');
-                });
+            document.querySelectorAll('.nav-item, .header-nav-item').forEach(item => {
+                item.addEventListener('click', () => handleNavigation(item.dataset.section));
             });
 
             document.getElementById('search-input').addEventListener('input', (e) => {
-                const query = e.target.value.toLowerCase();
+                const query = e.target.value.toLowerCase().trim();
                 const resultsContainer = document.getElementById('search-results-container');
                 resultsContainer.innerHTML = '';
                 if (query.length < 2) return;
 
-                const filteredVideos = allVideos.filter(video => video.title.toLowerCase().includes(query));
+                const filteredVideos = allVideos.filter(video => 
+                    video.title.toLowerCase().includes(query)
+                );
 
                 if (filteredVideos.length > 0) {
                     filteredVideos.forEach(video => {
@@ -706,10 +673,7 @@
                 allVideos = [];
                 if (snapshot.exists()) {
                     snapshot.forEach(child => {
-                        const videoData = {
-                            id: child.key,
-                            ...child.val()
-                        };
+                        const videoData = { id: child.key, ...child.val() };
                         allVideos.push(videoData);
                         grid.prepend(createVideoCard(child.key, child.val()));
                     });
@@ -725,11 +689,11 @@
             card.addEventListener('click', () => showInterstitialAd(() => openPlayer(videoData)));
 
             card.innerHTML = `
-                <img src="${videoData.thumbnailUrl}" class="thumbnail" alt="${videoData.title}">
+                <img src="${videoData.thumbnailUrl}" class="thumbnail" alt="${videoData.title}" loading="lazy">
                 <div class="video-details">
                     <div class="video-info">
                         <h3>${videoData.title}</h3>
-                        <p>${(videoData.views || 0)} views</p>
+                        <p>${(videoData.views || 0).toLocaleString()} views</p>
                     </div>
                 </div>
             `;
@@ -742,67 +706,33 @@
             return card;
         }
 
-        // Interstitial Ad Logic
         function showInterstitialAd(callback) {
             const adContainer = document.createElement('div');
             adContainer.id = 'interstitial-ad';
-            adContainer.style.position = 'fixed';
-            adContainer.style.top = '0';
-            adContainer.style.left = '0';
-            adContainer.style.width = '100%';
-            adContainer.style.height = '100%';
-            adContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-            adContainer.style.zIndex = '9999';
-            adContainer.style.display = 'flex';
-            adContainer.style.flexDirection = 'column';
-            adContainer.style.justifyContent = 'center';
-            adContainer.style.alignItems = 'center';
+            adContainer.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.9); z-index:9999; display:flex; flex-direction:column; justify-content:center; align-items:center;';
 
             adContainer.innerHTML = `
-                <div style="position: relative; width: 100%; max-width: 600px; height: 100%; max-height: 80vh; overflow: hidden; display: flex; flex-direction: column; align-items: center;">
-                    <div id="container-9fd8e9bb46d9655ee0344272a3b347c7" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;"></div>
-                    <button id="skip-ad-btn" style="
-                        position: absolute;
-                        top: 20px;
-                        right: 20px;
-                        background-color: #ff4d4d;
-                        color: white;
-                        border: none;
-                        padding: 10px 20px;
-                        font-size: 1rem;
-                        font-weight: bold;
-                        border-radius: 25px;
-                        cursor: pointer;
-                        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-                        transition: background-color 0.3s, transform 0.3s;
-                    ">Skip Ad</button>
-                </div>
+                <div id="interstitial-ad-content" style="position:relative; width:100%; height:100%; display:flex; justify-content:center; align-items:center;"></div>
+                <button id="skip-ad-btn" style="position:absolute; top:20px; right:20px; background-color:#ff4d4d; color:white; border:none; padding:10px 20px; font-size:1rem; font-weight:bold; border-radius:25px; cursor:pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: all 0.3s;">Skip Ad</button>
             `;
-
             document.body.appendChild(adContainer);
 
-            // Add the ad script
-            const adScript1 = document.createElement('script');
-            adScript1.async = true;
-            adScript1.setAttribute('data-cfasync', 'false');
-            adScript1.src = "//pl27457072.profitableratecpm.com/9fd8e9bb46d9655ee0344272a3b347c7/invoke.js";
-            document.getElementById('container-9fd8e9bb46d9655ee0344272a3b347c7').appendChild(adScript1);
+            // আপনার দেওয়া নতুন বিজ্ঞাপন কোডটি এখানে যুক্ত করা হলো
+            const adScript = document.createElement('script');
+            adScript.type = 'text/javascript';
+            adScript.src = '//pl27461905.profitableratecpm.com/60/6a/6c/606a6c3100d9a23e598000191be7784e.js';
+            document.getElementById('interstitial-ad-content').appendChild(adScript);
             
-            // Add skip functionality
-            document.getElementById('skip-ad-btn').addEventListener('click', () => {
-                adContainer.remove();
-                if (callback) callback();
-            });
-
-            // Fallback for ad loading
-            setTimeout(() => {
+            const closeAd = () => {
                 if (adContainer.parentNode) {
                     adContainer.remove();
-                    if (callback) callback();
                 }
-            }, 5000); // Ad will auto-skip after 5 seconds if not loaded
-        }
+                if (callback) callback();
+            };
 
+            document.getElementById('skip-ad-btn').addEventListener('click', closeAd);
+            setTimeout(closeAd, 8000); // ৮ সেকেন্ড পর অটোমেটিক চলে যাবে
+        }
 
         function openPlayer(videoData) {
             const playerPage = document.getElementById('player-page');
@@ -820,54 +750,32 @@
             playerPage.innerHTML = `
                 <div class="player-wrapper">
                      <button class="back-btn" onclick="closePlayer()">←</button>
-                     <button class="fullscreen-btn" onclick="toggleFullScreen(this)">⛶</button>
+                     <button class="fullscreen-btn" onclick="toggleFullScreen()">⛶</button>
                     <div class="player-container" id="main-player-container">${playerHTML}</div>
                 </div>
-                <!-- Ad Spot below player -->
                 <div class="banner-ad-container">
-                    <script type="text/javascript">
-                        atOptions = {
-                            'key' : 'b73356f285db12e53e1909281a3cfb52',
-                            'format' : 'iframe',
-                            'height' : 300,
-                            'width' : 160,
-                            'params' : {}
-                        };
-                    <\/script>
-                    <script type="text/javascript" src="//www.highperformanceformat.com/b73356f285db12e53e1909281a3cfb52/invoke.js"><\/script>
-                </div>
-                `;
+                    <script type='text/javascript' src='//pl27461905.profitableratecpm.com/60/6a/6c/606a6c3100d9a23e598000191be7784e.js'><\/script>
+                </div>`;
             playerPage.classList.remove('hidden');
         }
 
         function toggleFullScreen() {
             const playerContainer = document.getElementById('main-player-container');
-            const videoElement = playerContainer.querySelector('iframe') || playerContainer.querySelector('video');
-            if (videoElement) {
-                if (!document.fullscreenElement) {
-                    if (videoElement.requestFullscreen) {
-                        videoElement.requestFullscreen();
-                    } else if (videoElement.webkitRequestFullscreen) {
-                        videoElement.webkitRequestFullscreen();
-                    } else if (videoElement.msRequestFullscreen) {
-                        videoElement.msRequestFullscreen();
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen();
-                    }
-                }
+            if (!playerContainer) return;
+            
+            if (!document.fullscreenElement) {
+                playerContainer.requestFullscreen().catch(err => console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`));
+            } else {
+                document.exitFullscreen();
             }
         }
 
         function closePlayer() {
-            document.getElementById('player-page').classList.add('hidden');
-            document.getElementById('player-page').innerHTML = ''; // Clear content to stop video
-            try {
-                if (document.fullscreenElement) document.exitFullscreen();
-                screen.orientation.unlock();
-            } catch (e) {
-                console.warn(e);
+            const playerPage = document.getElementById('player-page');
+            playerPage.classList.add('hidden');
+            playerPage.innerHTML = ''; // video বন্ধ করার জন্য কন্টেন্ট খালি করা হলো
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
             }
         }
 
